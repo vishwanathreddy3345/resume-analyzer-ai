@@ -15,6 +15,8 @@ import PyPDF2
 
 app = Flask(__name__)
 
+app.config['SECRET_KEY'] = 'Vishwas48'
+
 # initialize database
 init_db()
 
@@ -118,4 +120,4 @@ def analyze():
 # Run Flask App
 # -----------------------------
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=10000)
