@@ -16,7 +16,7 @@ import os
 
 port = int(os.environ.get("PORT", 10000))
 
-app.config['SERVER_NAME'] = None
+# app.config['SERVER_NAME'] = None
 
 app = Flask(__name__)
 
