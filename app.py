@@ -56,6 +56,8 @@ def index():
     return render_template("index.html")
 
 
+
+
 # -----------------------------
 # Resume Analysis
 # -----------------------------
