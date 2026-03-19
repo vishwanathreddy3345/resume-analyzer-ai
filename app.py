@@ -12,6 +12,11 @@ from report_generator import generate_report
 from database import init_db, save_analysis
 
 import PyPDF2
+import os
+
+port = int(os.environ.get("PORT", 10000))
+
+app.config['SERVER_NAME'] = None
 
 app = Flask(__name__)
 
@@ -119,5 +124,6 @@ def analyze():
 # -----------------------------
 # Run Flask App
 # -----------------------------
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
+    app.run(host="0.0.0.0", port=port)
